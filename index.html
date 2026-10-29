@@ -547,7 +547,13 @@ function pintar() {
   // enlaces
   const wa = `https://wa.me/${CFG.whatsapp}?text=${encodeURIComponent(t.wa_txt(s ? s.n : ''))}`;
   document.querySelectorAll('[data-wa]').forEach(a => a.href = wa);
-  document.querySelectorAll('[data-registro]').forEach(a => { a.href = CFG.playmetrics; a.target = '_blank'; a.rel = 'noopener'; });
+  document.querySelectorAll('[data-registro]').forEach(a => { a.href = enlace(); a.target = '_blank'; a.rel = 'noopener'; });
+}
+
+function enlace() {   // UTM del anuncio → PlayMetrics, para saber de dónde vino cada inscripción
+  const u = new URL(CFG.playmetrics);
+  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'].forEach(k => { if (qs.get(k)) u.searchParams.set(k, qs.get(k)); });
+  return u.toString();
 }
 
 /* ===== Medición: al tocar "Register" (Meta y Google, si están instalados en la web) ===== */
