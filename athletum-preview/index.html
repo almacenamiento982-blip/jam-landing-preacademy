@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Juventus Pre-Academy Miami · Season 2026/27</title>
+<meta name="description" content="Juventus Pre-Academy in Miami: fun, structured soccer for boys and girls ages 3 to 16 at 5 locations in Miami-Dade and Broward. Register online.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap">
+<style>
+@font-face{font-family:"Juventus Fans";src:url("../assets/jfans-bold.woff2") format("woff2");font-weight:700;font-display:swap}
+:root{--negro:#0b0b0c;--negro2:#151517;--blanco:#fff;--oro:#a87a2d;--oro2:#c49a4f;--crema:#f5f0e7;--tinta:#1a1a1c;--gris:#5d5a55;--linea:#e4ddd0;--ok:#2f7a4c;
+  --tit:"Juventus Fans","Barlow Condensed","Arial Narrow",sans-serif;--txt:"Barlow",system-ui,"Segoe UI",sans-serif;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--blanco);color:var(--tinta);font:17px/1.55 var(--txt);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--tit);font-weight:700;text-transform:uppercase;line-height:.95;margin:0;letter-spacing:.5px;text-wrap:balance}
+.eyebrow{font:600 13px/1 var(--txt);letter-spacing:3px;text-transform:uppercase;color:var(--oro2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 16px/1 var(--txt);letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border:0;border-radius:6px;padding:18px 28px;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
+.btn-oro{background:var(--oro);color:#fff;box-shadow:0 10px 24px -10px rgba(168,122,45,.8)}
+.btn-oro:hover{background:#946a24;transform:translateY(-1px)}
+.btn-wa{background:transparent;color:inherit;border:1.5px solid currentColor;padding:16px 22px;font-size:14px}
+.btn-wa svg{width:20px;height:20px}
+.flecha{font-size:20px;line-height:0}
+
+/* barra superior */
+.top{position:absolute;inset:0 0 auto 0;z-index:5;padding-top:env(safe-area-inset-top,0px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.top img{height:46px;width:auto}
+.idioma{display:flex;gap:4px;background:rgba(255,255,255,.12);border-radius:999px;padding:4px}
+.idioma button{font:700 12px/1 var(--txt);letter-spacing:1px;color:#fff;background:transparent;border:0;border-radius:999px;padding:8px 12px;cursor:pointer}
+.idioma button[aria-pressed=true]{background:#fff;color:var(--negro)}
+
+/* portada: texto a la izquierda y foto completa a la derecha (en el celular, la foto arriba) */
+.hero{position:relative;background:var(--negro);color:#fff;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);min-height:min(900px,100svh);overflow:hidden}
+.hero-foto{position:relative;order:2;min-height:100%}
+.hero-foto img,.hero-foto video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.hero-video{opacity:0;transition:opacity .6s}.hero-video.lista{opacity:1}
+@media (prefers-reduced-motion:reduce){.hero-video{display:none}}
+.hero-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--negro) 0%,rgba(11,11,12,.35) 22%,rgba(11,11,12,0) 45%),linear-gradient(180deg,rgba(11,11,12,.5) 0%,rgba(11,11,12,0) 18%)}
+.hero-txt{position:relative;z-index:2;order:1;display:flex;flex-direction:column;justify-content:center;padding:120px 40px 56px max(20px,calc((100vw - 1180px)/2 + 20px))}
+.hv{position:absolute;inset:0}.hv+.hv,.hero-amb,.hero-ancho,.cinta,.hero-prueba{display:none}
+/* D (26-10, por defecto) · franja dorada en movimiento (como Kings League) y prueba social bajo los botones (como Sporta) */
+.hero.v-d .cinta{display:block;order:2;position:relative;z-index:3;background:var(--oro);color:var(--negro);overflow:hidden;white-space:nowrap;padding:13px 0 11px}
+.cinta-pista{display:inline-flex;animation:cinta 42s linear infinite}
+.cinta-pista span{font:700 22px/1 var(--tit);text-transform:uppercase;letter-spacing:1px;padding-inline:18px}
+.cinta-pista i{font-style:normal;color:#fff;font-size:16px;align-self:center}
+@keyframes cinta{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.cinta-pista{animation:none}}
+.hero.v-d .hero-prueba{display:flex;align-items:center;gap:12px;margin:22px 0 0;font:500 15px/1.35 var(--txt);color:#e2ddd3}
+.hero-prueba b{color:#fff}
+.caras{display:flex;flex:none}.caras img{flex:none;width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid var(--negro);margin-left:-10px}.caras img:first-child{margin-left:0}
+.hero.v-d h1{font-size:clamp(56px,8.2vw,124px)}
+/* portada de cada sede (?sede=): días, horario y grupos de ESA sede, a la vista */
+.hero.v-d.con-sede h1{font-size:clamp(48px,6.2vw,96px)}
+.hero.con-sede .sub{margin-bottom:18px}
+.hero-datos{display:grid;grid-template-columns:repeat(3,auto);width:fit-content;max-width:100%;margin:0 0 12px;border:1px solid rgba(255,255,255,.2);border-radius:10px;background:rgba(11,11,12,.5);backdrop-filter:blur(6px)}
+.hero-datos div{padding:12px 20px;border-left:1px solid rgba(255,255,255,.14)}.hero-datos div:first-child{border-left:0}
+.hero-datos small{display:block;font:700 11px/1 var(--txt);letter-spacing:2px;text-transform:uppercase;color:var(--oro2);margin-bottom:7px}
+.hero-datos b{font:600 17px/1.2 var(--txt);color:#fff}
+.hero-lugar{margin:0 0 22px;font:500 15px/1.4 var(--txt);color:#e2ddd3}
+.hero-lugar button{font:600 15px/1 var(--txt);color:var(--oro2);background:none;border:0;padding:0;margin-left:4px;cursor:pointer;text-decoration:underline}
+/* 26-10: 3 versiones de la portada en el computador (?hero=a|b|c); en el celular las tres son iguales (foto arriba) */
+@media (min-width:901px){
+  /* D · video horizontal a todo lo ancho, niños a la derecha, texto a la izquierda (Inter, Milan, Lil' Kickers) */
+  .hero.v-d{display:block;min-height:min(900px,100svh)}
+  .hero.v-d .hero-foto{display:none}
+  .hero.v-d .hero-ancho{display:block;position:absolute;inset:0}
+  .hero-ancho img,.hero-ancho video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 50%}
+  .hero-ancho::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,12,.88) 0%,rgba(11,11,12,.62) 32%,rgba(11,11,12,.08) 60%,rgba(11,11,12,0) 78%),linear-gradient(180deg,rgba(11,11,12,.55) 0%,rgba(11,11,12,0) 20%,rgba(11,11,12,0) 72%,rgba(11,11,12,.55) 100%)}
+  .hero.v-d .hero-txt{min-height:calc(min(900px,100svh) - 46px);max-width:calc(max(20px,(100vw - 1180px)/2 + 20px) + 760px);padding-bottom:64px}
+  .hero.v-d .cinta{position:absolute;left:0;right:0;bottom:0}
+  .hero.v-d.con-sede .hero-txt{padding-top:96px;padding-bottom:58px}
+  /* A · mosaico: tres videos verticales a todo lo ancho, texto encima con degradado (como IMG Academy / Juventus Academy) */
+  .hero.v-a{display:block;min-height:min(860px,100svh)}
+  .hero.v-a .hero-foto{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:var(--oro2)}
+  .hero.v-a .hv{position:relative;display:block;overflow:hidden}
+  .hero.v-a .hero-foto::after{z-index:1;background:linear-gradient(90deg,rgba(11,11,12,.93) 0%,rgba(11,11,12,.78) 30%,rgba(11,11,12,.2) 60%,rgba(11,11,12,0) 100%),linear-gradient(180deg,rgba(11,11,12,.6) 0%,rgba(11,11,12,0) 22%,rgba(11,11,12,0) 70%,rgba(11,11,12,.75) 100%)}
+  .hero.v-a .hero-txt{min-height:min(860px,100svh);max-width:calc(max(20px,(100vw - 1180px)/2 + 20px) + 760px)}
+  /* B · ambiente: el mismo video, desenfocado y oscuro, llena el lado del texto */
+  .hero.v-b .hero-amb{display:block;position:absolute;inset:-80px;width:calc(100% + 160px);height:calc(100% + 160px);max-width:none;object-fit:cover;filter:blur(42px) brightness(.5) saturate(1.25);z-index:0}
+  .hero.v-b::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(60% 70% at 18% 60%,rgba(196,154,79,.18),rgba(196,154,79,0) 70%),linear-gradient(90deg,rgba(11,11,12,.55),rgba(11,11,12,.2))}
+  .hero.v-b .hero-foto{z-index:1}
+  .hero.v-b .hero-foto::after{background:linear-gradient(90deg,rgba(11,11,12,.55) 0%,rgba(11,11,12,0) 28%),linear-gradient(180deg,rgba(11,11,12,.45) 0%,rgba(11,11,12,0) 18%)}
+  /* C · rayas: textura de la camiseta (rayas blanco y negro muy suaves), palabra JUVENTUS de fondo y brillo dorado */
+  .hero.v-c .hero-txt{background:radial-gradient(55% 60% at 30% 85%,rgba(196,154,79,.2),rgba(196,154,79,0) 70%),repeating-linear-gradient(90deg,#0b0b0c 0 96px,#19191b 96px 192px);overflow:hidden}
+  .hero.v-c .hero-txt::before{content:"JUVENTUS";position:absolute;left:-1vw;bottom:-3.2vw;font:700 19vw/1 var(--tit);color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.07);white-space:nowrap;pointer-events:none;z-index:-1}
+  .hero.v-c .hero-foto::after{background:linear-gradient(90deg,rgba(11,11,12,.9) 0%,rgba(11,11,12,.3) 20%,rgba(11,11,12,0) 42%),linear-gradient(180deg,rgba(11,11,12,.5) 0%,rgba(11,11,12,0) 18%)}
+}
+.hero h1{font-size:clamp(54px,7.4vw,108px);margin:14px 0 18px}
+.hero h1 em{font-style:normal;color:var(--oro2)}
+.hero .sub{max-width:560px;font-size:clamp(17px,1.6vw,20px);color:#ece8e1;margin:0 0 24px}
+.chips-lbl{font:600 12px/1 var(--txt);letter-spacing:2px;text-transform:uppercase;color:#cfc8bb;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{font:600 15px/1 var(--txt);color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:11px 16px;cursor:pointer;backdrop-filter:blur(6px)}
+.chip[aria-pressed=true]{background:#fff;color:var(--negro);border-color:#fff}
+.chip .g{display:inline-block;margin-left:6px;font-size:11px;font-weight:700;color:var(--oro2);letter-spacing:.5px}
+.chip[aria-pressed=true] .g{color:var(--oro)}
+.acciones{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--oro);color:#fff;font:700 14px/1.2 var(--txt);letter-spacing:.5px;padding:10px 14px;border-radius:6px;margin-bottom:18px}
+.badge.garantia{background:#fff;color:var(--negro)}
+
+/* datos */
+.datos{background:var(--negro);color:#fff;border-top:1px solid rgba(255,255,255,.08)}
+.datos .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.dato{padding:26px 18px;border-left:1px solid rgba(255,255,255,.1)}
+.dato:first-child{border-left:0}
+.dato b{display:block;font-family:var(--tit);font-size:40px;line-height:1;color:var(--oro2);text-transform:uppercase}
+.dato span{font-size:14px;color:#cfc8bb;letter-spacing:.3px}
+
+/* sede */
+.sec{padding-block:84px}
+.sec-tit{display:flex;flex-direction:column;gap:12px;margin-bottom:34px}
+.sec-tit h2{font-size:clamp(40px,5.4vw,64px)}
+.sec-tit p{max-width:640px;margin:0;color:var(--gris)}
+.crema{background:var(--crema)}
+.sedes{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.sede-card{position:relative;height:440px;border:0;border-radius:14px;overflow:hidden;cursor:pointer;text-align:left;font:inherit;color:#fff;background:var(--negro);padding:0;display:block;box-shadow:0 14px 30px -18px rgba(0,0,0,.55);transition:transform .2s,box-shadow .2s}
+.sede-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.sede-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,0) 35%,rgba(11,11,12,.55) 62%,rgba(11,11,12,.94) 100%)}
+.sede-card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -18px rgba(0,0,0,.6)}
+.sede-card:hover img{transform:scale(1.05)}
+.sc-info{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:20px 18px 18px;display:flex;flex-direction:column;gap:4px}
+.sc-info h3{font-size:40px;line-height:.92}
+.sc-zona{font:700 11px/1 var(--txt);letter-spacing:2px;text-transform:uppercase;color:var(--oro2)}
+.sc-dias{font-size:14px;color:#e2ddd3}
+.sc-ir{margin-top:10px;font:700 13px/1 var(--txt);letter-spacing:1.5px;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:8px}
+.sc-ir::after{content:"→";color:var(--oro2);font-size:18px;transition:transform .2s}
+.sede-card:hover .sc-ir::after{transform:translateX(4px)}
+.sc-cinta{position:absolute;top:14px;left:14px;z-index:2;background:var(--oro);color:#fff;font:700 11px/1 var(--txt);letter-spacing:1px;text-transform:uppercase;padding:8px 10px;border-radius:4px}
+.btn-sedes{background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.35);padding:16px 22px;font-size:14px}
+.btn-sedes:hover{background:rgba(255,255,255,.16)}
+.hero-sede{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:0 0 20px;font:600 15px/1.3 var(--txt);color:#e9e3d8}
+.hero-sede b{font-family:var(--tit);font-size:28px;letter-spacing:.5px;text-transform:uppercase;color:#fff;font-weight:700}
+.hero-sede button{font:600 14px/1 var(--txt);color:var(--oro2);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+.panel{display:grid;grid-template-columns:1.1fr .9fr;gap:0;background:#fff;border:1px solid var(--linea);border-radius:16px;overflow:hidden}
+.panel-info{padding:34px}
+.panel-info h3{font-size:52px;margin-bottom:6px}
+.panel-info .lugar{color:var(--gris);margin:0 0 22px}
+.panel-info .lugar a{color:var(--oro);font-weight:600}
+.fila{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--linea)}
+.fila .k{flex:0 0 120px;font:700 12px/1.6 var(--txt);letter-spacing:1.5px;text-transform:uppercase;color:var(--oro)}
+.grupos{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.grupos li{display:flex;justify-content:space-between;gap:10px;font-variant-numeric:tabular-nums}
+.grupos li b{font-weight:600}
+.precio small{color:var(--gris);display:block;font-size:14px}
+.panel-foto{position:relative;min-height:420px}
+.panel-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.panel .acciones{margin-top:22px}
+.panel .btn-wa{color:var(--tinta)}
+.otra{margin-top:16px;font-size:15px}
+.otra button{font:inherit;color:var(--oro);font-weight:600;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+
+/* por qué */
+.porque{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.razon{border-top:3px solid var(--oro);padding-top:18px}
+.razon b{font-family:var(--tit);font-size:30px;line-height:1;text-transform:uppercase;display:block;margin-bottom:10px}
+.razon p{margin:0;color:var(--gris);font-size:16px}
+.fotos{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin-top:44px}
+.fotos img{width:100%;height:340px;object-fit:cover;border-radius:10px}
+
+/* pasos */
+.oscuro{background:var(--negro);color:#fff}
+.oscuro .sec-tit p{color:#cfc8bb}
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:p}
+.paso{background:var(--negro2);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:28px;counter-increment:p}
+.paso::before{content:counter(p);font-family:var(--tit);font-size:72px;line-height:.8;color:var(--oro2);display:block;margin-bottom:14px}
+.paso h3{font-size:30px;margin-bottom:10px}
+.paso p{margin:0;color:#d8d2c7;font-size:16px}
+.paso .pkg{display:block;margin-top:12px;background:rgba(168,122,45,.16);border:1px dashed var(--oro2);border-radius:8px;padding:10px 12px;font:600 14px/1.4 var(--txt);color:#fff}
+.pasos-cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+/* preguntas */
+.faq{max-width:860px}
+.faq details{border-top:1px solid var(--linea);padding:18px 0}
+.faq details:last-child{border-bottom:1px solid var(--linea)}
+.faq summary{list-style:none;cursor:pointer;font:600 19px/1.35 var(--txt);display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 28px/1 var(--txt);color:var(--oro)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:12px 0 0;color:var(--gris)}
+
+/* cierre */
+.cierre{position:relative;color:#fff;background:var(--negro);overflow:hidden}
+.cierre img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;opacity:.45}
+.cierre .wrap{position:relative;padding-block:110px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:22px}
+.cierre h2{font-size:clamp(46px,7vw,92px);max-width:900px}
+.cierre p{margin:0;max-width:560px;color:#ece8e1}
+.pie{display:block;background:#050505;color:#a8a296;font-size:14px}
+.pie .wrap{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;padding-block:34px}
+.pie img{height:40px;width:auto}
+.pie a{color:#e6dfd2;text-decoration:none}
+.redes{display:flex;gap:16px}
+
+/* barra fija en el celular */
+.fija{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:10px;padding:12px 14px calc(12px + env(safe-area-inset-bottom,0px));background:rgba(11,11,12,.94);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.1)}
+.fija .btn{flex:1;padding:16px 10px;font-size:15px}
+.fija .btn-wa{flex:0 0 auto;color:#fff;padding:14px}
+
+/* WhatsApp: ayuda flotante, no botón principal */
+.wa-flota{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:25;display:flex;align-items:center;gap:10px;text-decoration:none}
+.wa-ico{width:54px;height:54px;border-radius:50%;background:#1f2a24;color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px -10px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.15)}
+.wa-txt{background:#fff;color:var(--tinta);font:600 13px/1 var(--txt);padding:9px 12px;border-radius:999px;box-shadow:0 8px 20px -10px rgba(0,0,0,.4);border:1px solid var(--linea)}
+.wa-flota:hover .wa-ico{background:#25d366}
+
+/* revisión (solo con ?revision) */
+.rev{position:fixed;right:14px;top:90px;z-index:30;background:#fff;border:2px solid var(--oro);border-radius:12px;padding:14px;font-size:13px;width:250px;box-shadow:0 18px 40px -16px rgba(0,0,0,.4)}
+.rev b{display:block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--oro);margin-bottom:8px}
+.rev label{display:flex;align-items:center;gap:8px;margin:6px 0}
+.rev select{width:100%;font:inherit;padding:6px}
+.rev .nota{color:var(--gris);margin-top:8px;font-size:12px;line-height:1.4}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-foto{order:0;height:min(64svh,560px);min-height:0}
+  .hero-foto::after{background:linear-gradient(180deg,rgba(11,11,12,.55) 0%,rgba(11,11,12,0) 22%,rgba(11,11,12,0) 55%,var(--negro) 100%)}
+  .hero-txt{order:1;padding:0 20px 40px;margin-top:-90px}
+  .datos .wrap{grid-template-columns:repeat(2,1fr)}.dato:nth-child(3){border-left:0}.dato{border-top:1px solid rgba(255,255,255,.08)}
+  .panel{grid-template-columns:1fr}.panel-foto{min-height:260px;order:-1}
+  .porque{grid-template-columns:1fr 1fr}
+  .sedes{grid-template-columns:1fr 1fr}.sede-card{height:300px}
+  .pasos{grid-template-columns:1fr}
+  .fotos{grid-template-columns:1fr 1fr}.fotos img:first-child{grid-column:1/-1}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .wrap{padding-inline:16px}
+  .top img{height:38px}
+  .hero-txt{padding:0 16px 32px;margin-top:-70px}
+  .hero .acciones .btn-oro{width:100%}
+  .hero .eyebrow{font-size:11px;letter-spacing:1.6px}
+  .hero.con-sede .hero-foto{height:min(44svh,400px)}
+  .hero-datos{grid-template-columns:repeat(3,1fr);width:auto}.hero-datos div{padding:10px 11px}
+  .hero-datos small{font-size:10px;letter-spacing:1.2px}.hero-datos b{font-size:14px}
+  .hero-lugar{font-size:14px;margin-bottom:18px}
+  .sec{padding-block:60px}
+  .panel-info{padding:24px 20px}.panel-info h3{font-size:42px}
+  .fila{flex-direction:column;gap:6px}.fila .k{flex:none}
+  .porque{grid-template-columns:1fr}
+  .sedes{grid-template-columns:1fr;gap:12px}.sede-card{height:172px}
+  .sede-card::after{background:linear-gradient(90deg,rgba(11,11,12,.92) 0%,rgba(11,11,12,.6) 48%,rgba(11,11,12,.05) 100%)}
+  .sc-info{top:0;justify-content:center;padding:16px 18px;max-width:72%}.sc-info h3{font-size:36px}
+  .sc-cinta{top:auto;bottom:14px;left:auto;right:14px}
+  .hero .acciones .btn-sedes{width:100%}
+  .fotos img{height:220px}
+  .fija{display:flex}
+  .wa-flota{bottom:calc(86px + env(safe-area-inset-bottom,0px));right:12px}
+  .wa-txt{display:none}
+  .wa-ico{width:50px;height:50px}
+  .pie{padding-bottom:84px}
+  .rev{top:auto;bottom:90px;right:10px;width:220px}
+}
+/* 30-10 · Athletum FC, el siguiente paso (propuesta, punto 36; solo vista previa hasta el OK de David) */
+.athletum{background:#0b0b0c;color:#fff;border-top:4px solid #FFE600}
+.ath-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:52px;align-items:center}
+.ath-escudo{width:76px;height:auto;margin-bottom:20px}
+.athletum .eyebrow{color:#FFE600}
+.athletum h2{font-size:clamp(40px,5.2vw,62px);margin:12px 0 16px}
+.athletum p{color:#cfc8bb;margin:0 0 24px;max-width:520px}
+.ath-datos{list-style:none;padding:0;margin:0 0 28px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.ath-datos li{border:1px solid rgba(255,230,0,.35);border-radius:8px;padding:14px 12px;display:flex;flex-direction:column;gap:6px}
+.ath-datos b{font:700 28px/1 var(--tit);color:#FFE600;letter-spacing:.5px}
+.ath-datos span{font-size:13px;line-height:1.3;color:#e6dfd2}
+.ath-datos .pendiente{border:1.5px dashed #ff7a7a}
+.ath-datos .pendiente b{color:#ff7a7a;font:600 14px/1.25 var(--txt);letter-spacing:0}
+.btn-ath{background:#FFE600;color:#0b0b0c;box-shadow:0 10px 24px -12px rgba(255,230,0,.7)}
+.btn-ath:hover{background:#f2da00;transform:translateY(-1px)}
+.ath-fotos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ath-fotos img{display:block;width:100%;height:100%;object-fit:cover;border-radius:10px;background:#1a1a1a}
+.ath-fotos .ancha{grid-column:1/-1;aspect-ratio:3/2}
+.ath-fotos .alta{aspect-ratio:4/5}
+.pie-ath{display:flex;align-items:center;gap:12px}
+.pie .pie-ath img{height:48px}
+@media (max-width:900px){.ath-grid{grid-template-columns:1fr;gap:30px}}
+@media (max-width:600px){.ath-datos{gap:8px}.ath-datos li{padding:12px 9px}.ath-datos b{font-size:22px}.ath-datos span{font-size:12px}.athletum .btn-ath{width:100%}}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <img src="../assets/img/logo_jam_blanco.png" alt="Juventus Academy Miami" width="600" height="313">
+  <div class="idioma" role="group" aria-label="Language">
+    <button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="es" aria-pressed="false">ES</button>
+  </div>
+</div></header>
+
+<section class="hero" id="inicio">
+  <img class="hero-amb" src="../assets/img/hero_poster.jpg" alt="" aria-hidden="true">
+  <div class="hero-ancho" aria-hidden="true"><img src="../assets/img/hero_ancho_poster.jpg" alt="" loading="lazy"><video class="hero-ancho-video" muted loop playsinline preload="none"></video></div>
+  <div class="hero-foto">
+    <div class="hv"><img class="hero-poster" src="../assets/img/hero_poster.jpg" alt="Juventus Pre-Academy players training in Miami" fetchpriority="high">
+      <video class="hero-video" muted loop playsinline preload="metadata" aria-hidden="true" poster="../assets/img/hero_poster.jpg"></video></div>
+    <div class="hv"><img src="../assets/img/hero_poster_2.jpg" alt="" loading="lazy"><video class="hero-video" data-desde="5.4" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+    <div class="hv"><img src="../assets/img/hero_poster_3.jpg" alt="" loading="lazy"><video class="hero-video" data-desde="10.4" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+  </div>
+  <div class="hero-txt">
+    <div class="eyebrow" data-t="eyebrow"></div>
+    <h1 data-t="h1"></h1>
+    <p class="sub" data-t="sub"></p>
+    <div id="hero-badge"></div>
+    <div id="hero-sede"></div>
+    <div class="acciones">
+      <a class="btn btn-oro" data-registro href="#"><span data-t="cta"></span><span class="flecha">→</span></a>
+      <a class="btn btn-sedes" href="#sedes" id="btn-sedes"><span data-t="ver_sedes"></span><span class="flecha">↓</span></a>
+    </div>
+    <p class="hero-prueba"><span class="caras" aria-hidden="true"><img src="../assets/img/cara_1.jpg" alt=""><img src="../assets/img/cara_2.jpg" alt=""><img src="../assets/img/cara_3.jpg" alt=""></span><span data-t="prueba"></span></p>
+  </div>
+  <div class="cinta" aria-hidden="true"><div class="cinta-pista" id="cinta"></div></div>
+</section>
+
+<section class="datos"><div class="wrap">
+  <div class="dato"><b data-t="d1n"></b><span data-t="d1"></span></div>
+  <div class="dato"><b data-t="d2n"></b><span data-t="d2"></span></div>
+  <div class="dato"><b>5</b><span data-t="d3"></span></div>
+  <div class="dato"><b data-t="d4n"></b><span data-t="d4"></span></div>
+</div></section>
+
+<section class="sec crema" id="sedes"><div class="wrap">
+  <div class="sec-tit"><div class="eyebrow" style="color:var(--oro)" data-t="sedes_eb"></div><h2 data-t="sedes_h"></h2><p data-t="sedes_p"></p></div>
+  <div id="sede-zona"></div>
+</div></section>
+
+<section class="sec" id="porque"><div class="wrap">
+  <div class="sec-tit"><div class="eyebrow" style="color:var(--oro)" data-t="por_eb"></div><h2 data-t="por_h"></h2></div>
+  <div class="porque">
+    <div class="razon"><b data-t="r1h"></b><p data-t="r1"></p></div>
+    <div class="razon"><b data-t="r2h"></b><p data-t="r2"></p></div>
+    <div class="razon"><b data-t="r3h"></b><p data-t="r3"></p></div>
+    <div class="razon"><b data-t="r4h"></b><p data-t="r4"></p></div>
+  </div>
+  <div class="fotos">
+    <img src="../assets/img/coach_1600.jpg" srcset="../assets/img/coach_800.jpg 800w, ../assets/img/coach_1600.jpg 1600w" sizes="(max-width:900px) 100vw, 60vw" alt="A Juventus Academy coach watching a young player dribble" loading="lazy" style="object-position:50% 45%">
+    <img src="../assets/img/amigos_800.jpg" alt="Two Pre-Academy friends at practice" loading="lazy" style="object-position:50% 25%">
+    <img src="../assets/img/arquero_800.jpg" alt="A young goalkeeper diving to save" loading="lazy" style="object-position:50% 35%">
+  </div>
+</div></section>
+
+<section class="sec oscuro" id="registro"><div class="wrap">
+  <div class="sec-tit"><div class="eyebrow" data-t="pasos_eb"></div><h2 data-t="pasos_h"></h2><p data-t="pasos_p"></p></div>
+  <div class="pasos">
+    <div class="paso"><h3 data-t="p1h"></h3><p data-t="p1"></p></div>
+    <div class="paso"><h3 data-t="p2h"></h3><p data-t="p2"></p><span class="pkg" id="pkg"></span></div>
+    <div class="paso"><h3 data-t="p3h"></h3><p data-t="p3"></p></div>
+  </div>
+  <div class="pasos-cta">
+    <a class="btn btn-oro" data-registro href="#"><span data-t="cta"></span><span class="flecha">→</span></a>
+  </div>
+</div></section>
+
+<section class="sec crema" id="preguntas"><div class="wrap">
+  <div class="sec-tit"><div class="eyebrow" style="color:var(--oro)" data-t="faq_eb"></div><h2 data-t="faq_h"></h2></div>
+  <div class="faq" id="faq"></div>
+</div></section>
+
+<!-- ATHLETUM: sección propuesta (30-10); armar_wp.py la quita salvo ATHLETUM=1 (hasta el "aprobado publícalo" de David) -->
+<section class="sec athletum" id="athletum"><div class="wrap ath-grid">
+  <div class="ath-txt">
+    <img class="ath-escudo" src="../assets/img/ath_escudo_240.webp" alt="Athletum FC" width="240" height="397" loading="lazy" decoding="async">
+    <div class="eyebrow" data-t="ath_eb"></div>
+    <h2 data-t="ath_h"></h2>
+    <p data-t="ath_p"></p>
+    <ul class="ath-datos">
+      <li><b>MLS NEXT</b><span data-t="ath_d1"></span></li>
+      <li><b>60+</b><span data-t="ath_d2"></span></li>
+      <li class="pendiente"><b>[dato college por confirmar]</b><span data-t="ath_d3"></span></li>
+    </ul>
+    <a class="btn btn-ath" href="https://athletumfc.com/?utm_source=jacademymiami&amp;utm_medium=referral&amp;utm_campaign=preacademy_landing" target="_blank" rel="noopener"><span data-t="ath_cta"></span><span class="flecha">↗</span></a>
+  </div>
+  <div class="ath-fotos">
+    <img class="ancha" src="../assets/img/ath_grupo_1400.webp" srcset="../assets/img/ath_grupo_800.webp 800w, ../assets/img/ath_grupo_1400.webp 1400w" sizes="(max-width:900px) 100vw, 55vw" alt="Athletum FC players laughing together on media day" width="1400" height="933" loading="lazy" decoding="async">
+    <img class="alta" src="../assets/img/ath_trio_900.webp" srcset="../assets/img/ath_trio_600.webp 600w, ../assets/img/ath_trio_900.webp 900w" sizes="(max-width:900px) 50vw, 27vw" alt="Three Athletum FC players with the MLS NEXT patch" width="900" height="1125" loading="lazy" decoding="async">
+    <img class="alta" src="../assets/img/ath_accion_900.webp" srcset="../assets/img/ath_accion_600.webp 600w, ../assets/img/ath_accion_900.webp 900w" sizes="(max-width:900px) 50vw, 27vw" alt="An Athletum FC player running during a match" width="900" height="1125" loading="lazy" decoding="async">
+  </div>
+</div></section>
+<!-- /ATHLETUM -->
+
+<section class="cierre">
+  <img src="../assets/img/comunidad_1600.jpg" alt="" loading="lazy">
+  <div class="wrap">
+    <h2 data-t="cierre_h"></h2>
+    <p data-t="cierre_p"></p>
+    <div class="acciones" style="justify-content:center">
+      <a class="btn btn-oro" data-registro href="#"><span data-t="cta"></span><span class="flecha">→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="pie"><div class="wrap">
+  <img src="../assets/img/logo_jam_blanco.png" alt="Juventus Academy Miami" width="600" height="313" loading="lazy">
+  <!-- ATHLETUM --><a class="pie-ath" href="https://athletumfc.com/?utm_source=jacademymiami&amp;utm_medium=referral&amp;utm_campaign=preacademy_landing" target="_blank" rel="noopener"><img src="../assets/img/ath_escudo_120.webp" alt="Athletum FC" width="120" height="198" loading="lazy"><span data-t="pie_ath"></span></a><!-- /ATHLETUM -->
+  <div>128 NE 17th St, Miami, FL 33132 · <a href="tel:+17864593464">(786) 459-3464</a> · <a href="mailto:miami@juventus-academy.com">miami@juventus-academy.com</a></div>
+  <div class="redes"><a href="https://www.instagram.com/juventusacademymiami/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@juventusacademymiami" target="_blank" rel="noopener">TikTok</a><a href="https://www.facebook.com/juventusacademymiami" target="_blank" rel="noopener">Facebook</a></div>
+  <div style="width:100%">© Soccer Cage LLC · Juventus Academy Miami</div>
+</div></footer>
+
+<div class="fija">
+  <a class="btn btn-oro" data-registro href="#"><span data-t="cta"></span></a>
+</div>
+
+<a class="wa-flota" data-wa href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <span class="wa-txt" data-t="wa_corto"></span>
+  <span class="wa-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg></span>
+</a>
+
+<script>
+/* ===== Configuración (revisar antes de publicar) ===== */
+const CFG = {
+  // Registro: programa 117699 "PRE-ACADEMY & PICCOLO PROGRAM 2026/27" (el mismo enlace de jacademymiami.com/programs/)
+  playmetrics: 'https://app.playmetrics.com/signup?clubToken=TG9naW4tQ2x1Yi52MS01NzYtMTc5MjUxMjY4NnxUSTFXaUFDWXIyWlRlb01pQ1d3T3kzamZaRVdWODdSdVdrZnVWSW54N1BBPQ==&program_id=117699',
+  whatsapp: '17864593464',
+  pixel: '',                 // ID del píxel de Meta (se pone al montarla en WordPress)
+  garantia14: false,         // "14 días satisfecho o reembolsado" en Doral y Davie: pendiente de Cristian
+  precios: true              // mostrar "desde $X al mes" por sede
+};
+// Datos tomados de PlayMetrics (programa 117699) el 26-10-2026
+const SEDES = [
+  { id:'downtown', zona:'Miami-Dade', n:'Downtown Miami', lugar:'Athletum Downtown', dir:'128 NE 17th St, Miami, FL 33132', dias:{en:'Tuesdays & Fridays',es:'Martes y viernes'}, gratis:true, desde:165,
+    grupos:[['Piccolo Campione · U5','3:30–4:30 PM','PICCOLO CAMPIONE PROGRAM: DOWNTOWN MIAMI: U5'],['U6–U10','4:30–5:30 PM','DOWNTOWN MIAMI: First Session U6 to U10'],['U11–U17','5:30–6:30 PM','DOWNTOWN MIAMI: Second Session U11 to U17']] },
+  { id:'doral', zona:'Miami-Dade', n:'Doral', lugar:'Doral Legacy Park', dir:'11400 NW 82nd St, Doral, FL 33178', dias:{en:'Tuesdays & Fridays',es:'Martes y viernes'}, gratis:false, desde:94,
+    grupos:[['Boys U4–U8','5:00–6:00 PM','DORAL BOYS: First session'],['Boys U9–U13','6:00–7:00 PM','DORAL BOYS: Second session'],['Boys U14–U19','7:00–8:00 PM','DORAL BOYS: Third session'],['Girls U6–U12','6:00–7:00 PM','DORAL GIRLS: First Session'],['Girls U13–U19','7:00–8:00 PM','DORAL GIRLS: Second Session']] },
+  { id:'davie', zona:'Broward', n:'Davie', lugar:'David Posnack JCC', dir:'5850 S Pine Island Rd, Davie, FL 33328', dias:{en:'Tuesdays & Thursdays',es:'Martes y jueves'}, gratis:false, desde:150,
+    grupos:[['U4–U9','5:00–6:00 PM','BROWARD: First session U4 to U9'],['U10–U16','6:00–7:00 PM','BROWARD: Second session U10 to U16']] },
+  { id:'miramar', zona:'Broward', n:'Miramar', lugar:'Miramar Regional Park', dir:'Miramar, FL', dias:{en:'Tuesdays & Thursdays',es:'Martes y jueves'}, gratis:true, desde:125,
+    grupos:[['U6–U10','5:00–6:00 PM','MIRAMAR: First session: U6 to U10'],['U11–U17','6:00–7:00 PM','MIRAMAR: Second session: U11 - U17']] },
+  { id:'materbay', zona:'Cutler Bay · Miami-Dade', n:'Mater Bay', lugar:'Mater Academy Cutler Bay', dir:'22025 SW 87th Ave, Cutler Bay, FL 33190', dias:{en:'Tuesdays & Thursdays',es:'Martes y jueves'}, gratis:true, desde:160,
+    grupos:[['U4–U8','6:30–7:30 PM','MATER Bay: First session U4 to U8'],['U9–U12','7:30–8:30 PM','MATER Bay: Second session U9 to U12']] }
+];
+const GRATIS = SEDES.filter(s => s.gratis).map(s => s.n);
+
+const T = {
+ en: {
+  eyebrow:'Juventus Pre-Academy · Season 2026/27',
+  h1:'Their first season, <em>the Juventus way</em>',
+  sub:'Fun, structured soccer for boys and girls ages 3 to 16, coached by Juventus Academy Miami. Two practices a week at 5 locations in Miami-Dade and Broward.',
+  elige:'Choose your location', chip_gratis:'1st month free', ver_sedes:'Find your location', cambiar:'Change location', ver_horarios:'See schedules', cta:'Register now', wa:'Questions? WhatsApp', wa_corto:'Questions? Chat with us',
+  gratis_badge:'First month FREE at Miramar, Mater Bay & Downtown Miami', gratis_sede:s=>`Your first month is FREE at ${s}`,
+  prueba:'<b>1,300+ players</b> in Pre-Academy in the past years',
+  cinta:['Pre-Academy 2026/27', 'Ages 3–16', 'Boys & girls', '5 locations in Miami', 'The Juventus way', '1st month free at Miramar, Mater Bay & Downtown'],
+  // portada de cada sede (el anuncio de cada sede lleva a ?sede=)
+  eyebrow_sede:n=>`Juventus Pre-Academy · ${n} · Season 2026/27`, h1_sede:n=>`Juventus soccer, <em>right here in ${n}</em>`,
+  sub_sede:(lugar, rango)=>`Two practices a week at ${lugar}, with groups by age from ${rango} for boys and girls. Coached by Juventus Academy Miami.`,
+  k_dias:'Days', k_horario:'Time', k_grupos:'Groups', n_grupos:n=>`${n} by age`, rango:(a, b)=>`U${a} to U${b}`,
+  cinta_sede:(s, rango, horas)=>[s.n, s.dias.en, s.lugar, horas, `Groups ${rango}`, 'Boys & girls', 'The Juventus way', ...(s.gratis ? ['1st month free'] : [])],
+  garantia_sede:s=>`14-day satisfaction guarantee at ${s}: if it's not for your child, you get your money back`,
+  d1n:'3–16', d1:'Ages, boys & girls', d2n:'2×', d2:'Practices every week', d3:'Locations in Miami-Dade & Broward', d4n:'Kit', d4:'Official uniform delivered home',
+  sedes_eb:'Locations & schedules', sedes_h:'Choose your location', sedes_p:'Tap your location to see the days, groups and times. Every group is organized by age, so your child trains with kids at the same level.',
+  sedes_eb_sede:'Schedules & groups', sedes_h_sede:n=>`Practices in ${n}`, sedes_p_sede:'Find your child’s group by age and register in a few minutes. Every group is organized by age, so your child trains with kids at the same level.',
+  donde:'Where', cuando:'When', grupos:'Groups & times', plan:'Monthly plan', desde:n=>`From $${n} / month`, plan_nota:'Plus a one-time registration. Billed monthly through May 2027. You see the exact amount before paying.',
+  plan_doral:'From $94 / month for Doral residents ($113 non-residents)',
+  mapa:'Directions', otra:'See another location', reg_sede:s=>`Register in ${s}`,
+  por_eb:'Why Juventus Pre-Academy', por_h:'More than a soccer class',
+  r1h:'The Juventus method', r1:'The way Juventus teaches the game in its academies around the world: technique, coordination and game understanding, adapted to each age.',
+  r2h:'Learning, no pressure', r2:'Pre-Academy is for kids who want to learn the fundamentals and enjoy the game, without the commitment of a competitive team.',
+  r3h:'A path if they love it', r3:'When they are ready, players can try out for our competitive teams. The club\'s top players compete with Athletum FC in MLS NEXT.',
+  r4h:'A real community', r4:'Juventus Academy Miami trains South Florida families in Miami facilities. In the past years, more than 1,300 players have been part of Pre-Academy.',
+  pasos_eb:'Registration', pasos_h:'Sign up in 3 steps', pasos_p:'Registration is 100% online through PlayMetrics, the system our club uses. It takes just a few minutes.',
+  p1h:'Tap "Register now"', p1:'You\'ll go to PlayMetrics. Create a free account, or log in if you already have one.',
+  p2h:'Choose your location', p2:'Add your player and pick the package for your location and your child\'s age group:', pkg_todas:'Every package starts with the name of the location: DOWNTOWN MIAMI, DORAL, BROWARD (Davie), MIRAMAR or MATER Bay.',
+  p3h:'Confirm and you\'re in', p3:'Complete the payment and you\'ll receive a confirmation email. The official kit is delivered to your home.',
+  faq_eb:'Questions', faq_h:'What parents ask',
+  ath_eb:'Partner club', ath_h:'The next step: Athletum FC', ath_p:'As your child grows, the path continues in the competitive program of Athletum FC, the partner club of Juventus Academy Miami.',
+  ath_d1:'Elite youth academy league', ath_d2:'Games per season', ath_d3:'College', ath_cta:'Discover Athletum FC', pie_ath:'Partner club: Athletum FC',
+  faq:[
+   ['What ages can join?','Boys and girls from 3 to 16 (in Doral, up to 19). Groups are organized by age, from Piccolo Campione (ages 3–4, Downtown Miami) up to U17.'],
+   ['Does my child need experience?','No. Pre-Academy is designed for beginners and for kids who want to keep improving and enjoying the game without a competitive team.'],
+   ['How much does it cost?','It is a monthly plan that depends on the location, plus a one-time registration. You see the exact amount for your location and group in PlayMetrics before you pay.'],
+   ['Is the first month really free?',`Yes, at ${'Miramar, Mater Bay and Downtown Miami'}. At Doral and Davie the regular monthly plan applies.`],
+   ['When does the season run?','Season 2026/27 runs through May 2027 and you can join now. Payments are monthly.'],
+   ['Is the uniform included?','The official Juventus Academy kit is delivered to your home after you register. Double-check the size when you sign up. Until it arrives, your child can train in any plain black sports shirt and shorts.'],
+   ['What should my child bring?','Soccer cleats, shin guards and a water bottle.'],
+   ['How is it different from the competitive program?','Competitive teams play tournaments and require a tryout. Pre-Academy is open to everyone, with no tryout, and focuses on learning and enjoying the game.'],
+   ['I still have questions','Write to us on WhatsApp or call (786) 459-3464. We are happy to help you choose the right location and group.']
+  ],
+  cierre_h:'Give them a season they\'ll never forget', cierre_p:'Registration for 2026/27 is open at all 5 locations. Sign up online in a few minutes and see you on the field.',
+  wa_txt:s=>s?`Hi! I have a question about Pre-Academy in ${s}.`:'Hi! I have a question about Pre-Academy.'
+ },
+ es: {
+  eyebrow:'Juventus Pre-Academy · Temporada 2026/27',
+  h1:'Su primera temporada, <em>al estilo Juventus</em>',
+  sub:'Fútbol divertido y bien organizado para niños y niñas de 3 a 16 años, con Juventus Academy Miami. Dos prácticas por semana en 5 sedes de Miami-Dade y Broward.',
+  elige:'Elige tu sede', chip_gratis:'1er mes gratis', ver_sedes:'Elige tu sede', cambiar:'Cambiar sede', ver_horarios:'Ver horarios', cta:'Inscríbelo ahora', wa:'¿Dudas? WhatsApp', wa_corto:'¿Dudas? Escríbenos',
+  gratis_badge:'Primer mes GRATIS en Miramar, Mater Bay y Downtown Miami', gratis_sede:s=>`El primer mes es GRATIS en ${s}`,
+  prueba:'<b>Más de 1.300 jugadores</b> en Pre-Academy en los últimos años',
+  cinta:['Pre-Academy 2026/27', 'De 3 a 16 años', 'Niños y niñas', '5 sedes en Miami', 'Al estilo Juventus', '1er mes gratis en Miramar, Mater Bay y Downtown'],
+  eyebrow_sede:n=>`Juventus Pre-Academy · ${n} · Temporada 2026/27`, h1_sede:n=>`Fútbol al estilo Juventus, <em>aquí en ${n}</em>`,
+  sub_sede:(lugar, rango)=>`Dos prácticas por semana en ${lugar}, con grupos por edad de ${rango} para niños y niñas. Entrenados por Juventus Academy Miami.`,
+  k_dias:'Días', k_horario:'Horario', k_grupos:'Grupos', n_grupos:n=>`${n} por edad`, rango:(a, b)=>`U${a} a U${b}`,
+  cinta_sede:(s, rango, horas)=>[s.n, s.dias.es, s.lugar, horas, `Grupos ${rango}`, 'Niños y niñas', 'Al estilo Juventus', ...(s.gratis ? ['1er mes gratis'] : [])],
+  garantia_sede:s=>`Garantía de 14 días en ${s}: si no es para tu hijo, te devolvemos el dinero`,
+  d1n:'3–16', d1:'Años, niños y niñas', d2n:'2×', d2:'Prácticas por semana', d3:'Sedes en Miami-Dade y Broward', d4n:'Kit', d4:'Uniforme oficial a domicilio',
+  sedes_eb:'Sedes y horarios', sedes_h:'Elige tu sede', sedes_p:'Toca tu sede para ver los días, los grupos y los horarios. Cada grupo es por edad, así tu hijo entrena con niños de su mismo nivel.',
+  sedes_eb_sede:'Horarios y grupos', sedes_h_sede:n=>`Prácticas en ${n}`, sedes_p_sede:'Busca el grupo de tu hijo según su edad e inscríbelo en pocos minutos. Cada grupo es por edad, así entrena con niños de su mismo nivel.',
+  donde:'Dónde', cuando:'Cuándo', grupos:'Grupos y horarios', plan:'Plan mensual', desde:n=>`Desde $${n} al mes`, plan_nota:'Más una inscripción única. Se paga mes a mes hasta mayo de 2027. Ves el monto exacto antes de pagar.',
+  plan_doral:'Desde $94 al mes para residentes de Doral ($113 no residentes)',
+  mapa:'Cómo llegar', otra:'Ver otra sede', reg_sede:s=>`Inscríbelo en ${s}`,
+  por_eb:'Por qué Juventus Pre-Academy', por_h:'Más que una clase de fútbol',
+  r1h:'El método Juventus', r1:'La forma en que Juventus enseña el fútbol en sus academias de todo el mundo: técnica, coordinación y entendimiento del juego, adaptados a cada edad.',
+  r2h:'Aprender sin presión', r2:'Pre-Academy es para niños que quieren aprender los fundamentos y disfrutar el juego, sin el compromiso de un equipo competitivo.',
+  r3h:'Un camino si se enamora', r3:'Cuando esté listo, puede presentarse a las pruebas de nuestros equipos competitivos. Los mejores jugadores del club compiten con Athletum FC en MLS NEXT.',
+  r4h:'Una comunidad de verdad', r4:'Juventus Academy Miami forma a familias del sur de Florida en sus sedes de Miami. En los últimos años, más de 1.300 jugadores han pasado por Pre-Academy.',
+  pasos_eb:'Inscripción', pasos_h:'Inscríbelo en 3 pasos', pasos_p:'La inscripción es 100 % en línea por PlayMetrics, el sistema que usa el club. Toma pocos minutos.',
+  p1h:'Toca "Inscríbelo ahora"', p1:'Entras a PlayMetrics. Crea una cuenta gratis, o inicia sesión si ya tienes una.',
+  p2h:'Elige tu sede', p2:'Agrega a tu hijo y elige el paquete de tu sede y del grupo de su edad:', pkg_todas:'Cada paquete empieza con el nombre de la sede: DOWNTOWN MIAMI, DORAL, BROWARD (Davie), MIRAMAR o MATER Bay.',
+  p3h:'Confirma y listo', p3:'Completa el pago y recibirás un correo de confirmación. El uniforme oficial te llega a la casa.',
+  faq_eb:'Preguntas', faq_h:'Lo que preguntan los papás',
+  ath_eb:'Club partner', ath_h:'El siguiente paso: Athletum FC', ath_p:'Cuando el niño crece, el camino sigue en el programa competitivo de Athletum FC, partner de Juventus Academy Miami.',
+  ath_d1:'Liga élite de academias juveniles', ath_d2:'Partidos por temporada', ath_d3:'College', ath_cta:'Conoce Athletum FC', pie_ath:'Club partner: Athletum FC',
+  faq:[
+   ['¿Qué edades pueden entrar?','Niños y niñas de 3 a 16 años (en Doral, hasta 19). Los grupos son por edad, desde Piccolo Campione (3 y 4 años, Downtown Miami) hasta U17.'],
+   ['¿Mi hijo necesita experiencia?','No. Pre-Academy está pensado para quienes empiezan y para niños que quieren seguir mejorando y disfrutando sin un equipo competitivo.'],
+   ['¿Cuánto cuesta?','Es un plan mensual que depende de la sede, más una inscripción única. Ves el monto exacto de tu sede y grupo en PlayMetrics antes de pagar.'],
+   ['¿De verdad el primer mes es gratis?','Sí, en Miramar, Mater Bay y Downtown Miami. En Doral y Davie aplica el plan mensual normal.'],
+   ['¿Cuándo es la temporada?','La temporada 2026/27 va hasta mayo de 2027 y puedes entrar ahora. Los pagos son mensuales.'],
+   ['¿El uniforme está incluido?','El uniforme oficial de Juventus Academy te llega a la casa después de inscribirlo. Revisa bien la talla al inscribirte. Mientras llega, puede entrenar con cualquier camiseta y short deportivos negros, sin logos.'],
+   ['¿Qué debe llevar?','Zapatos de fútbol (tacos), canilleras y una botella de agua.'],
+   ['¿En qué se diferencia del programa competitivo?','Los equipos competitivos juegan torneos y piden una prueba (tryout). Pre-Academy es abierto a todos, sin prueba, y se enfoca en aprender y disfrutar.'],
+   ['Todavía tengo dudas','Escríbenos por WhatsApp o llama al (786) 459-3464. Te ayudamos a elegir la sede y el grupo.']
+  ],
+  cierre_h:'Dale una temporada que nunca va a olvidar', cierre_p:'La inscripción 2026/27 está abierta en las 5 sedes. Inscríbelo en línea en pocos minutos y nos vemos en la cancha.',
+  wa_txt:s=>s?`¡Hola! Tengo una pregunta sobre Pre-Academy en ${s}.`:'¡Hola! Tengo una pregunta sobre Pre-Academy.'
+ }
+};
+
+/* ===== Estado: idioma y sede (por la URL: ?sede=miramar&lang=es, o #miramar) ===== */
+const qs = new URLSearchParams(location.search);
+const leer = k => { try { return localStorage.getItem('jam_pa_' + k); } catch (e) { return null; } };
+const guardar = (k, v) => { try { localStorage.setItem('jam_pa_' + k, v); } catch (e) {} };
+let lang = qs.get('lang') || leer('lang') || ((navigator.language || '').toLowerCase().startsWith('es') ? 'es' : 'en');
+let sede = (qs.get('sede') || location.hash.slice(1) || '').toLowerCase();
+if (!SEDES.some(s => s.id === sede)) sede = '';
+const S = () => SEDES.find(s => s.id === sede);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+function beneficio(s) {
+  if (s.gratis) return `<div class="badge">★ ${esc(T[lang].gratis_sede(s.n))}</div>`;
+  if (CFG.garantia14) return `<div class="badge garantia">✓ ${esc(T[lang].garantia_sede(s.n))}</div>`;
+  return '';
+}
+
+function pintar() {
+  const t = T[lang]; document.documentElement.lang = lang;
+  document.querySelectorAll('[data-t]').forEach(el => { const v = t[el.dataset.t]; if (typeof v === 'string') el.innerHTML = v; });
+  document.querySelectorAll('.idioma button').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang));
+  const s = S();
+  // portada de la sede (si llegó por el anuncio de una sede): titular con la ciudad, días, horario y grupos de ESA sede
+  let cinta = t.cinta;
+  document.querySelector('.hero').classList.toggle('con-sede', !!s);
+  if (s) {
+    const us = s.grupos.flatMap(g => [...g[0].matchAll(/U(\d+)/g)].map(m => +m[1])), rango = t.rango(Math.min(...us), Math.max(...us));
+    const min = h => { const [a, b] = h.trim().split(':'); return (parseInt(a) % 12 + 12) * 60 + parseInt(b); }, hora = m => `${Math.floor(m / 60) - 12}:${String(m % 60).padStart(2, '0')}`;
+    const ini = Math.min(...s.grupos.map(g => min(g[1].split('–')[0]))), fin = Math.max(...s.grupos.map(g => min(g[1].split('–')[1]))), horas = `${hora(ini)}–${hora(fin)} PM`;
+    document.querySelector('.hero .eyebrow').textContent = t.eyebrow_sede(s.n);
+    document.querySelector('.hero h1').innerHTML = t.h1_sede(esc(s.n));
+    document.querySelector('.hero .sub').textContent = t.sub_sede(s.lugar, rango);
+    document.querySelectorAll('.hero [data-registro] span:first-child, .fija [data-registro] span').forEach(x => { x.textContent = t.reg_sede(s.n); });
+    document.querySelector('#btn-sedes span').textContent = t.ver_horarios;
+    document.getElementById('hero-sede').innerHTML = `<div class="hero-datos"><div><small>${t.k_dias}</small><b>${esc(s.dias[lang])}</b></div><div><small>${t.k_horario}</small><b>${horas}</b></div><div><small>${t.k_grupos}</small><b>${esc(t.n_grupos(s.grupos.length))}</b></div></div>
+      <p class="hero-lugar">📍 ${esc(s.lugar)}, ${esc(s.dir.split(',').slice(-2, -1)[0]?.trim() || s.n)} · <button type="button" data-sede="">${t.cambiar}</button></p>`;
+    cinta = t.cinta_sede(s, rango, horas);
+    // sección de horarios: ya no pide "Elige tu sede" si el padre llegó a una sede
+    document.querySelector('#sedes [data-t="sedes_eb"]').textContent = t.sedes_eb_sede;
+    document.querySelector('#sedes [data-t="sedes_h"]').textContent = t.sedes_h_sede(s.n);
+    document.querySelector('#sedes [data-t="sedes_p"]').textContent = t.sedes_p_sede;
+  } else document.getElementById('hero-sede').innerHTML = '';
+  // franja dorada: los textos dos veces seguidas para que el movimiento no tenga corte
+  const fila = cinta.map(x => `<span>${esc(x)}</span><i>★</i>`).join('');
+  document.getElementById('cinta').innerHTML = fila + fila;
+  document.getElementById('hero-badge').innerHTML = s ? beneficio(s) : `<div class="badge">★ ${esc(t.gratis_badge)}</div>`;
+  // sedes: panel de la elegida o las 5 tarjetas
+  const zona = document.getElementById('sede-zona');
+  if (s) {
+    const precio = !CFG.precios ? '' : `<div class="fila"><div class="k">${t.plan}</div><div class="precio">${s.id === 'doral' ? esc(t.plan_doral) : esc(t.desde(s.desde))}<small>${esc(t.plan_nota)}</small></div></div>`;
+    zona.innerHTML = `<div class="panel"><div class="panel-info">
+      ${beneficio(s)}
+      <h3>${esc(s.n)}</h3>
+      <p class="lugar">${esc(s.lugar)} · ${esc(s.dir)} · <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.lugar + ', ' + s.dir)}" target="_blank" rel="noopener">${t.mapa}</a></p>
+      <div class="fila"><div class="k">${t.cuando}</div><div>${esc(s.dias[lang])}</div></div>
+      <div class="fila"><div class="k">${t.grupos}</div><ul class="grupos">${s.grupos.map(g => `<li><b>${esc(g[0])}</b><span>${esc(g[1])}</span></li>`).join('')}</ul></div>
+      ${precio}
+      <div class="acciones"><a class="btn btn-oro" data-registro href="#">${esc(t.reg_sede(s.n))}<span class="flecha">→</span></a></div>
+      <div class="otra"><button type="button" data-sede="">${t.otra}</button></div>
+    </div><div class="panel-foto"><img src="../assets/img/${s.id === 'doral' || s.id === 'davie' ? 'remate' : 'amigos'}_1600.jpg" alt="" loading="lazy" style="object-position:50% 30%"></div></div>`;
+  } else {
+    zona.innerHTML = `<div class="sedes">${SEDES.map(x => `<button type="button" class="sede-card" data-sede="${x.id}" aria-label="${esc(x.n)}">
+      <img src="../assets/img/ciudad_${x.id}.jpg" alt="" loading="lazy">
+      ${x.gratis ? `<span class="sc-cinta">★ ${t.chip_gratis}</span>` : ''}
+      <span class="sc-info"><span class="sc-zona">${esc(x.zona)}</span><h3>${esc(x.n)}</h3><span class="sc-dias">${esc(x.dias[lang])} · ${x.grupos.length} ${lang === 'es' ? 'grupos' : 'groups'}</span><span class="sc-ir">${t.ver_horarios}</span></span>
+    </button>`).join('')}</div>`;
+  }
+  // paso 2: paquete exacto
+  document.getElementById('pkg').innerHTML = s ? s.grupos.map(g => `“${esc(g[2])}…”`).join('<br>') : esc(t.pkg_todas);
+  // preguntas
+  document.getElementById('faq').innerHTML = t.faq.map((q, i) => `<details${i === 0 ? ' open' : ''}><summary>${esc(q[0])}</summary><p>${esc(q[1])}</p></details>`).join('');
+  // enlaces
+  const wa = `https://wa.me/${CFG.whatsapp}?text=${encodeURIComponent(t.wa_txt(s ? s.n : ''))}`;
+  document.querySelectorAll('[data-wa]').forEach(a => a.href = wa);
+  document.querySelectorAll('[data-registro]').forEach(a => { a.href = enlace(); a.target = '_blank'; a.rel = 'noopener'; });
+}
+
+function enlace() {   // UTM del anuncio → PlayMetrics, para saber de dónde vino cada inscripción
+  const u = new URL(CFG.playmetrics);
+  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'].forEach(k => { if (qs.get(k)) u.searchParams.set(k, qs.get(k)); });
+  return u.toString();
+}
+
+/* ===== Medición: al tocar "Register" (Meta y Google, si están instalados en la web) ===== */
+// 29-10: el píxel lo pone el sitio (WPCode, 3753924101424890). Un solo Lead por visita aunque se toque Register varias veces,
+// con eventID (deduplicación con la API de conversiones). El fragmento del sitio no cuenta los botones [data-registro].
+const enviados = {};
+function medir(tipo) {
+  const s = S(), datos = { content_name: 'Pre-Academy 2026/27', content_category: s ? s.n : 'all locations' };
+  const ev = tipo === 'registro' ? 'Lead' : 'Contact';
+  if (enviados[ev]) return; enviados[ev] = true;
+  try { if (window.fbq) fbq('track', ev, datos, { eventID: ev.toLowerCase() + '-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8) }); } catch (e) {}
+  try { if (window.gtag) gtag('event', tipo === 'registro' ? 'generate_lead' : 'contact', { program: 'pre_academy', location: datos.content_category }); } catch (e) {}
+}
+if (CFG.pixel) {
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', CFG.pixel); fbq('track', 'PageView');
+}
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-lang]'); if (b) { lang = b.dataset.lang; guardar('lang', lang); pintar(); return; }
+  const c = e.target.closest('[data-sede]');
+  if (c) { sede = c.dataset.sede; history.replaceState(null, '', sede ? '#' + sede : location.pathname + location.search); pintar();
+    if (c.classList.contains('sede-card') || c.closest('.otra') || c.closest('.hero-sede')) document.getElementById('sedes').scrollIntoView({ behavior: 'smooth' }); return; }
+  if (e.target.closest('[data-registro]')) medir('registro');
+  if (e.target.closest('[data-wa]')) medir('whatsapp');
+});
+
+/* ===== Panel de revisión (solo con ?revision en la URL) ===== */
+if (qs.has('revision')) {
+  const r = document.createElement('div'); r.className = 'rev';
+  r.innerHTML = `<b>Vista de revisión</b>
+    <label>Sede <select id="rv-sede"><option value="">Todas (página general)</option>${SEDES.map(s => `<option value="${s.id}">${s.n}</option>`).join('')}</select></label>
+    <label><input type="checkbox" id="rv-gar"> Garantía 14 días (Doral y Davie)</label>
+    <label><input type="checkbox" id="rv-pre" checked> Mostrar precios</label>
+    <div class="nota">Cada sede tiene su propia dirección para su anuncio: ?sede=downtown, doral, davie, miramar, materbay. Este panel no aparece en la versión publicada.</div>`;
+  document.body.appendChild(r);
+  const sel = r.querySelector('#rv-sede'); sel.value = sede;
+  sel.onchange = () => { sede = sel.value; pintar(); };
+  r.querySelector('#rv-gar').onchange = e => { CFG.garantia14 = e.target.checked; pintar(); };
+  r.querySelector('#rv-pre').onchange = e => { CFG.precios = e.target.checked; pintar(); };
+}
+pintar();
+
+/* ===== Portada en video (secuencia de fotos reales con la camiseta 2026-27) ===== */
+(function () {
+  const hero = document.querySelector('.hero'), variante = (qs.get('hero') || 'd').toLowerCase();
+  if ('abcd'.includes(variante)) hero.classList.add('v-' + variante);
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const movil = matchMedia('(max-width:800px)').matches, pc = matchMedia('(min-width:901px)').matches, mosaico = variante === 'a' && pc;
+  if (variante === 'd' && pc) {   // D en el computador: un solo video horizontal a todo lo ancho
+    const v = document.querySelector('.hero-ancho-video'); v.src = '../assets/video/hero_ancho.mp4';
+    v.addEventListener('canplay', () => v.play().catch(() => {}), { once: true }); v.play().catch(() => {});
+    return;
+  }
+  // en el mosaico, los 3 paneles usan el mismo video empezando en fotos distintas (nunca se repite la misma foto a la vez)
+  [...document.querySelectorAll('.hero-video')].slice(0, mosaico ? 3 : 1).forEach(v => {
+    const desde = parseFloat(v.dataset.desde || 0);
+    v.src = '../assets/video/' + (movil ? 'hero_movil.mp4' : 'hero_pc.mp4');
+    if (desde) v.addEventListener('loadedmetadata', () => { v.currentTime = desde; }, { once: true });
+    v.addEventListener('playing', () => v.classList.add('lista'), { once: true });
+    const play = () => v.play().catch(() => {});
+    v.addEventListener('canplay', play, { once: true }); play();
+  });
+})();
+</script>
+</body>
+</html>
