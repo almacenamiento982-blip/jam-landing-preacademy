@@ -260,12 +260,12 @@ h1,h2,h3{font-family:var(--tit);font-weight:700;text-transform:uppercase;line-he
 .athletum .eyebrow{color:#FFE600}
 .athletum h2{font-size:clamp(40px,5.2vw,62px);margin:12px 0 16px}
 .athletum p{color:#cfc8bb;margin:0 0 24px;max-width:520px}
-.ath-datos{list-style:none;padding:0;margin:0 0 28px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.ath-datos{list-style:none;padding:0;margin:0 0 28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .ath-datos li{border:1px solid rgba(255,230,0,.35);border-radius:8px;padding:14px 12px;display:flex;flex-direction:column;gap:6px}
 .ath-datos b{font:700 28px/1 var(--tit);color:#FFE600;letter-spacing:.5px}
 .ath-datos span{font-size:13px;line-height:1.3;color:#e6dfd2}
-.ath-datos .pendiente{border:1.5px dashed #ff7a7a}
-.ath-datos .pendiente b{color:#ff7a7a;font:600 14px/1.25 var(--txt);letter-spacing:0}
+.ath-datos .ancho{grid-column:1/-1}
+.ath-datos .ancho b{font-size:22px}
 .btn-ath{background:#FFE600;color:#0b0b0c;box-shadow:0 10px 24px -12px rgba(255,230,0,.7)}
 .btn-ath:hover{background:#f2da00;transform:translateY(-1px)}
 .ath-fotos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -364,15 +364,15 @@ h1,h2,h3{font-family:var(--tit);font-weight:700;text-transform:uppercase;line-he
     <p data-t="ath_p"></p>
     <ul class="ath-datos">
       <li><b>MLS NEXT</b><span data-t="ath_d1"></span></li>
-      <li><b>60+</b><span data-t="ath_d2"></span></li>
-      <li class="pendiente"><b>[dato college por confirmar]</b><span data-t="ath_d3"></span></li>
+      <li><b>12</b><span data-t="ath_d2"></span></li>
+      <li class="ancho"><b data-t="ath_d3h"></b><span>Inter Miami CF Academy · LA Galaxy · Nashville SC · AS Roma · UCF (NCAA D1)</span></li>
     </ul>
     <a class="btn btn-ath" href="https://athletumfc.com/?utm_source=jacademymiami&amp;utm_medium=referral&amp;utm_campaign=preacademy_landing" target="_blank" rel="noopener"><span data-t="ath_cta"></span><span class="flecha">↗</span></a>
   </div>
   <div class="ath-fotos">
-    <img class="ancha" src="../assets/img/ath_grupo_1400.webp" srcset="../assets/img/ath_grupo_800.webp 800w, ../assets/img/ath_grupo_1400.webp 1400w" sizes="(max-width:900px) 100vw, 55vw" alt="Athletum FC players laughing together on media day" width="1400" height="933" loading="lazy" decoding="async">
-    <img class="alta" src="../assets/img/ath_trio_900.webp" srcset="../assets/img/ath_trio_600.webp 600w, ../assets/img/ath_trio_900.webp 900w" sizes="(max-width:900px) 50vw, 27vw" alt="Three Athletum FC players with the MLS NEXT patch" width="900" height="1125" loading="lazy" decoding="async">
-    <img class="alta" src="../assets/img/ath_accion_900.webp" srcset="../assets/img/ath_accion_600.webp 600w, ../assets/img/ath_accion_900.webp 900w" sizes="(max-width:900px) 50vw, 27vw" alt="An Athletum FC player running during a match" width="900" height="1125" loading="lazy" decoding="async">
+    <img class="ancha" src="../assets/img/ath_grupo_1400.webp" srcset="../assets/img/ath_grupo_800.webp 800w, ../assets/img/ath_grupo_1400.webp 1400w" sizes="(max-width:900px) 100vw, 55vw" alt="Athletum FC players in a team huddle in the white and gold 2026-27 kit" width="1400" height="933" loading="lazy" decoding="async">
+    <img class="alta" src="../assets/img/ath_trio_900.webp" srcset="../assets/img/ath_trio_600.webp 600w, ../assets/img/ath_trio_900.webp 900w" sizes="(max-width:900px) 50vw, 27vw" alt="An Athletum FC player controlling the ball" width="900" height="1125" loading="lazy" decoding="async">
+    <img class="alta" src="../assets/img/ath_accion_900.webp" srcset="../assets/img/ath_accion_600.webp 600w, ../assets/img/ath_accion_900.webp 900w" sizes="(max-width:900px) 50vw, 27vw" alt="An Athletum FC player during an MLS NEXT match" width="900" height="1125" loading="lazy" decoding="async">
   </div>
 </div></section>
 <!-- /ATHLETUM -->
@@ -462,7 +462,7 @@ const T = {
   p3h:'Confirm and you\'re in', p3:'Complete the payment and you\'ll receive a confirmation email. The official kit is delivered to your home.',
   faq_eb:'Questions', faq_h:'What parents ask',
   ath_eb:'Partner club', ath_h:'The next step: Athletum FC', ath_p:'As your child grows, the path continues in the competitive program of Athletum FC, the partner club of Juventus Academy Miami.',
-  ath_d1:'Elite youth academy league', ath_d2:'Games per season', ath_d3:'College', ath_cta:'Discover Athletum FC', pie_ath:'Partner club: Athletum FC',
+  ath_d1:'Since 2023-24', ath_d2:'MLS NEXT teams', ath_d3h:'Players at pro academies & college', ath_cta:'Discover Athletum FC', pie_ath:'Partner club: Athletum FC',
   faq:[
    ['What ages can join?','Boys and girls from 3 to 16 (in Doral, up to 19). Groups are organized by age, from Piccolo Campione (ages 3–4, Downtown Miami) up to U17.'],
    ['Does my child need experience?','No. Pre-Academy is designed for beginners and for kids who want to keep improving and enjoying the game without a competitive team.'],
@@ -507,7 +507,7 @@ const T = {
   p3h:'Confirma y listo', p3:'Completa el pago y recibirás un correo de confirmación. El uniforme oficial te llega a la casa.',
   faq_eb:'Preguntas', faq_h:'Lo que preguntan los papás',
   ath_eb:'Club partner', ath_h:'El siguiente paso: Athletum FC', ath_p:'Cuando el niño crece, el camino sigue en el programa competitivo de Athletum FC, partner de Juventus Academy Miami.',
-  ath_d1:'Liga élite de academias juveniles', ath_d2:'Partidos por temporada', ath_d3:'College', ath_cta:'Conoce Athletum FC', pie_ath:'Club partner: Athletum FC',
+  ath_d1:'Desde 2023-24', ath_d2:'Equipos en MLS NEXT', ath_d3h:'Jugadores en academias pro y college', ath_cta:'Conoce Athletum FC', pie_ath:'Club partner: Athletum FC',
   faq:[
    ['¿Qué edades pueden entrar?','Niños y niñas de 3 a 16 años (en Doral, hasta 19). Los grupos son por edad, desde Piccolo Campione (3 y 4 años, Downtown Miami) hasta U17.'],
    ['¿Mi hijo necesita experiencia?','No. Pre-Academy está pensado para quienes empiezan y para niños que quieren seguir mejorando y disfrutando sin un equipo competitivo.'],
